@@ -34,3 +34,37 @@
 --trimwhitespace always
 --wraparguments preserve
 --wrapcollections preserve
+
+# rules
+--enable andOperator                  # Prefer comma over && in if, guard or while conditions.
+--enable anyObjectProtocol            # Prefer AnyObject over class in protocol definitions.
+--enable blankLinesAroundMark         # Insert blank line before and after MARK: comments.
+--enable blankLinesAtEndOfScope       # Remove trailing blank line at the end of a scope.
+--enable blankLinesAtStartOfScope     # Remove leading blank line at the start of a scope.
+--enable blankLinesBetweenScopes      # Insert blank line before class, struct, enum, extension, protocol or function declarations.
+--enable braces                       # Wrap braces in accordance with selected style (K&R or Allman).
+--enable consecutiveBlankLines        # Replace consecutive blank lines with a single blank line.
+--enable consecutiveSpaces Replace consecutive spaces with a single space.
+--enable duplicateImports Remove duplicate import statements.
+--enable elseOnSameLine Place else, catch or while keyword in accordance with current style (same or next line). See --elseposition in options !!!
+--enable emptyBraces Remove whitespace inside empty braces.
+--enable fileHeader Use specified source file header template for all files. See --header option ???
+--enable hoistPatternLet Reposition let or var bindings within pattern. See --patternlet option
+--enable
+--enable
+--enable
+--enable 
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
+--enable
