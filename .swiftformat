@@ -50,21 +50,29 @@
 --enable emptyBraces Remove whitespace inside empty braces.
 --enable fileHeader Use specified source file header template for all files. See --header option ???
 --enable hoistPatternLet Reposition let or var bindings within pattern. See --patternlet option
+--enable indent do zrobienia xD !!!!
+--enable leadingDelimiters Move leading delimiters to the end of the previous line.
+--enable linebreakAtEndOfFile Add empty blank line at end of file. See --linebreaks option
+--enable numberFormatting Use consistent grouping for numeric literals. See many options
+--enable redundantBreak Remove redundant break in switch case.
+--enable redundantExtensionACL Remove redundant access control specifiers.
+--enable redundantFileprivate Prefer private over fileprivate where equivalent.
+--enable redundantGet Remove unneeded get clause inside computed properties.
+--enable redundantInit Remove explicit init if not required.
+--enable redundantLet Remove redundant let/var from ignored variables.
+--enable redundantLetError Remove redundant let error from catch clause.
+--enable redundantNilInit Remove redundant nil default value (Optional vars are nil by default).
+--enable redundantObjc Remove redundant @objc annotations.
+--enable redundantParens Remove redundant parentheses.
+--enable redundantPattern Remove redundant pattern matching parameter syntax.
+--enable redundantReturn Remove unneeded return keyword.
 --enable
 --enable
---enable
---enable 
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
---enable
+
+# Disabled
+
+--disabled isEmpty In rare cases, the isEmpty rule may insert an isEmpty call for a type that doesn't implement that property, breaking the program. For this reason, the rule is disabled by default, and must be manually enabled via the --enable isEmpty option.
+--disabled ranges It is deprecated. spaceAroundOperators is used instead.
+
+# Do przegadania
+--disabled redundantRawValues Remove redundant raw string values for enum cases.
