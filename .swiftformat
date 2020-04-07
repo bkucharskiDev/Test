@@ -46,14 +46,14 @@
 --enable consecutiveBlankLines        # Replace consecutive blank lines with a single blank line.
 --enable consecutiveSpaces            # Replace consecutive spaces with a single space.
 --enable duplicateImports             # Remove duplicate import statements.
---enable elseOnSameLine               # Place else, catch or while keyword in accordance with current style (same or next line). See --elseposition in options !!!
+--enable elseOnSameLine               # Place else, catch or while keyword in accordance with current style (same or next line). Options: --elseposition
 --enable emptyBraces                  # Remove whitespace inside empty braces.
 --enable fileHeader                   # Use specified source file header template for all files. See --header option ???
---enable hoistPatternLet              # Reposition let or var bindings within pattern. See --patternlet option
---enable indent                       # do zrobienia xD !!!!
+--enable hoistPatternLet              # Reposition let or var bindings within pattern. Options: --patternlet
+--enable indent                       # Indent code in accordance with the scope level. Options: --indent, --tabwidth, --indentcase, --ifdef, --xcodeindentation
 --enable leadingDelimiters            # Move leading delimiters to the end of the previous line.
---enable linebreakAtEndOfFile         # Add empty blank line at end of file. See --linebreaks option
---enable numberFormatting             # Use consistent grouping for numeric literals. See many options
+--enable linebreakAtEndOfFile         # Add empty blank line at end of file. Options: --linebreaks
+--enable numberFormatting             # Use consistent grouping for numeric literals. Options: --decimalgrouping, --binarygrouping, --octalgrouping, --hexgrouping, --fractiongrouping, --exponentgrouping, --hexliteralcase, --exponentcase
 --enable redundantBreak               # Remove redundant break in switch case.
 --enable redundantExtensionACL        # Remove redundant access control specifiers.
 --enable redundantFileprivate         # Prefer private over fileprivate where equivalent.
