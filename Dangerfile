@@ -1,6 +1,6 @@
 # Configuration
-jira_project_id = ""
-jira_project_base_url = ""
+jira_project_id = "TEST"
+jira_project_base_url = "https://EXAMPLE_URL.com/browse"
 
 # Linking JIRA ticket
 jira.check(
@@ -16,7 +16,8 @@ jira.check(
 ### PR contents checks
 
 # Ensure there is JIRA ID in PR title
-fail("PR doesn't have JIRA ID in title") if github.pr_title.include? "[#{jira_project_id }-" == false
+is_jira_id_included = github.pr_title.include? "[#{jira_project_id }-"
+fail("PR doesn't have JIRA ID in title or it's not correct. PR title should begin with [#{jira_project_id}-") if (is_jira_id_included == false)
 
 # Ensure there is a summary for a PR
 fail("Please provide a summary in the Pull Request description") if github.pr_body.length < 5
@@ -36,8 +37,6 @@ swiftlint.lint_files
 ### Modified files checks
 
 # Checking for TODOs
-todoist.message = "Please fix all TODOS"
-todoist.warn_for_todos
 todoist.print_todos_table
 
 changedFiles = (git.added_files + git.modified_files).select{ |file| file.end_with?(".swift") }
