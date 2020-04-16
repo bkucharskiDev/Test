@@ -10,7 +10,7 @@ jira.check(
   search_commits: false,
   fail_on_warning: false,
   report_missing: false,
-  skippable: true
+  skippable: false
 )
 
 ### PR contents checks
@@ -23,7 +23,6 @@ fail("PR doesn't have JIRA ID in title or it's not correct. PR title should begi
 fail("Please provide a summary in the Pull Request description") if github.pr_body.length < 5
 
 # Check commits - warn if they are not nice
-commit_lint.check disable: [:empty_line]
 commit_lint.check warn: :all
 
 # Show all build errors, warnings and unit tests results generated from xcodebuild
@@ -48,11 +47,4 @@ changedFiles.each do |changed_file|
   # filter out only the lines that were added
   addedLines = git.diff_for_file(changed_file).patch.lines.select{ |line| line.start_with?("+") }
   fail("`//  Created by ` lines in header files should be removed") if addedLines.select{ |line| line.include?("//  Created by ") }.count != 0
-end
-
-# Fail if diff contains try! or as!
-changedFiles.each do |changed_file|
-  # filter out only the lines that were added
-  addedLines = git.diff_for_file(changed_file).patch.lines.select{ |line| line.start_with?("+") }
-  fail("No new force try! or as!") if addedLines.select{ |line| (line.include?("as!") || line.include?("try!")) }.count != 0
 end
