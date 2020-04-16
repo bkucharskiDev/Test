@@ -13,8 +13,6 @@ jira.check(
   skippable: false
 )
 
-### PR contents checks
-
 # Ensure there is JIRA ID in PR title
 is_jira_id_included = github.pr_title.include? "[#{jira_project_id }-"
 fail("PR doesn't have JIRA ID in title or it's not correct. PR title should begin with [#{jira_project_id}-") if (is_jira_id_included == false)
@@ -30,8 +28,6 @@ xcode_summary.report 'xcodebuild.json'
 # Running SwiftLint
 swiftlint.lint_files
 
-### Modified files checks
-
 changedFiles = (git.added_files + git.modified_files).select{ |file| file.end_with?(".swift") }
 changedFiles.each do |changed_file|
   addedLines = git.diff_for_file(changed_file).patch.lines.select{ |line| line.start_with?("+") }
@@ -40,9 +36,9 @@ changedFiles.each do |changed_file|
   warn("There are print statements inside modified files!") if addedLines.select{ |line| line.include?("print(") }.count != 0
 
   # Check for TODOs in modified files
-  warn("There are TODOs inside modified files!") if addedLines.select{ |line| line.include?("TODO") | line.include?("todo") }.count != 0
+  warn("There are TODOs inside modified files!") if addedLines.map(&:downcase).select{ |line| line.include?("//") & line.include?("todo") }.count != 0
 
-  # Warn if new header files contains “//  Created by ”
+  # Check if new header files contains “//  Created by ” line
   fail("`//  Created by ` lines in header files should be removed") if addedLines.select{ |line| line.include?("//  Created by ") }.count != 0
 end
 
