@@ -37,8 +37,7 @@ swiftlint.lint_files
 ### Modified files checks
 
 # Checking for TODOs
-todoist.message = "Please fix all TODOS"
-todoist.warn_for_todos
+todoist.print_todos_table
 
 changedFiles = (git.added_files + git.modified_files).select{ |file| file.end_with?(".swift") }
 
