@@ -17,7 +17,7 @@ jira.check(
 
 # Ensure there is JIRA ID in PR title
 is_jira_id_included = github.pr_title.include? "[#{jira_project_id }-"
-fail("PR doesn't have JIRA ID in title") if is_jira_id_included == false
+fail("PR doesn't have JIRA ID in title") if (is_jira_id_included == false)
 
 # Ensure there is a summary for a PR
 fail("Please provide a summary in the Pull Request description") if github.pr_body.length < 5
