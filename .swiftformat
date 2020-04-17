@@ -1,19 +1,19 @@
-# file options
---exclude Pods,**/FunctionalOperators.swift
+# Excluded directories
+--exclude Pods
 
-# format options
+# Format Options
 --allman false
---binarygrouping 4,8
---commas always
+--binarygrouping none
+--commas inline
 --comments indent
---decimalgrouping 3,6
+--decimalgrouping none
 --elseposition same-line
 --empty void
 --exponentcase lowercase
 --exponentgrouping disabled
 --fractiongrouping disabled
---header "\n {file}\n BlizzardArt\n"
---hexgrouping 4,8
+--header "\n {file}\n PROJECT_NAME\n"
+--hexgrouping none
 --hexliteralcase uppercase
 --ifdef indent
 --indent 4
@@ -21,11 +21,11 @@
 --importgrouping testable-bottom
 --linebreaks lf
 --maxwidth none
---octalgrouping 4,8
+--octalgrouping none
 --operatorfunc spaced
 --patternlet hoist
 --ranges spaced
---self init-only
+--self remove
 --semicolons inline
 --stripunusedargs closure-only
 --swiftversion 5.2
@@ -33,8 +33,10 @@
 --wraparguments preserve
 --wrapcollections preserve
 --trailingclosures map,flatMap
+--nospaceoperators ...,..<
 
-# rules
+# Enabled rules
+
 --enable andOperator                  # Prefer comma over && in if, guard or while conditions.
 --enable anyObjectProtocol            # Prefer AnyObject over class in protocol definitions.
 --enable blankLinesAroundMark         # Insert blank line before and after MARK: comments.
@@ -91,14 +93,11 @@
 --enable yodaConditions               # Prefer constant values to be on the right-hand-side of expressions.
 
 
-# Disabled
+# Disabled rules
 
---disable isEmpty                    # In rare cases, the isEmpty rule may insert an isEmpty call for a type that doesn't implement that property, breaking the program. For this reason, the rule is disabled by default, and must be manually enabled via the --enable isEmpty option.
---disable ranges                     # It is deprecated. spaceAroundOperators rule is used instead.
---disable wrapArguments              # Align wrapped function arguments or collection elements. Options: --wraparguments, --wrapparameters,  --wrapcollections,  --closingparen
-
-
-# Do przegadania
+--disable isEmpty                      # In rare cases, the isEmpty rule may insert an isEmpty call for a type that doesn't implement that property, breaking the program. For this reason, the rule is disabled by default, and must be manually enabled via the --enable isEmpty option.
+--disable ranges                       # It is deprecated. spaceAroundOperators rule is used instead.
+--disable wrapArguments                # Align wrapped function arguments or collection elements. Options: --wraparguments, --wrapparameters,  --wrapcollections,  --closingparen
 --disable redundantRawValues           # Remove redundant raw string values for enum cases.
 --disable sortedImports                # Sort import statements alphabetically.
 --disable wrap                         # Wrap lines that exceed the specified maximum width. Options: --maxwidth

@@ -1,9 +1,6 @@
 //
 //  ViewController.swift
-//  Test
-//
-//  Created by Bartosz Kucharski on 06/04/2020.
-//  Copyright © 2020 Bartosz Kucharski. All rights reserved.
+//  BlizzardArt
 //
 
 import UIKit
@@ -14,7 +11,4 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
-

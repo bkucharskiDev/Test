@@ -1,19 +1,30 @@
 //
 //  XD.swift
-//  Test
+//  BlizzardArt
 //
 
 import Foundation
 
-
 class XD {
-    
+
     func foo() {
         5 as! Int
         print()
-        [1,2,3,4,5]
+        0..<20
+        true ? false : true
         print("TESTSSSSSS")
+        0xEABC_DEEE
     }
-    
-    // TODO
+
+    // TODO:
+}
+
+struct Dupa {
+    let a: Int
+    let b: Int
+
+    init(a: Int, innaDupa: Int) {
+        b = innaDupa
+        self.a = a
+    }
 }
