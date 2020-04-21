@@ -48,9 +48,12 @@ commit_lint.check warn: :all
 # Print markdown containing a random post from thecodinglove.com.
 the_coding_love.random
 
-puts(Dir.entries("."))
+# Check CocoaPods outdated dependencies
+if (File.exist?("Podfile.lock"))
+  system("pod outdated")
+end
 
-pod outdated
-
-# Swift version & Xcode
-# outdated versions of Pods & Carthage
+# Check Carthage outdated dependencies
+if (File.exist?("Cartfile.resolved"))
+  system("carthage outdated")
+end
