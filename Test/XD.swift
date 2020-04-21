@@ -1,6 +1,6 @@
 //
 //  XD.swift
-//  BlizzardArt
+//  PROJECT_NAME
 //
 
 import Foundation
@@ -13,7 +13,7 @@ class XD {
         0..<20
         true ? false : true
         print("TESTSSSSSS")
-        0xEABC_DEEE
+        0xEABCDEEE
     }
 
     // TODO:

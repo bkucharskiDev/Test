@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  BlizzardArt
+//  PROJECT_NAME
 //
 
 import UIKit
