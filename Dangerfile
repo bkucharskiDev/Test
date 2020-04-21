@@ -48,5 +48,9 @@ commit_lint.check warn: :all
 # Print markdown containing a random post from thecodinglove.com.
 the_coding_love.random
 
+puts(Dir.entries("."))
+
+pod outdated
+
 # Swift version & Xcode
 # outdated versions of Pods & Carthage
