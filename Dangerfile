@@ -45,15 +45,15 @@ end
 # Check commits - warn if they are not nice
 commit_lint.check warn: :all
 
-# Print markdown containing a random post from thecodinglove.com.
-the_coding_love.random
-
-# Check CocoaPods outdated dependencies
+# Check for CocoaPods outdated dependencies
 if (File.exist?("Podfile.lock"))
   system("pod outdated")
 end
 
-# Check Carthage outdated dependencies
+# Check for Carthage outdated dependencies
 if (File.exist?("Cartfile.resolved"))
   system("carthage outdated")
 end
+
+# Print markdown containing a random post from thecodinglove.com.
+the_coding_love.random
