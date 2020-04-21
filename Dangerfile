@@ -47,13 +47,14 @@ commit_lint.check warn: :all
 
 # Check for CocoaPods outdated dependencies
 if (File.exist?("Podfile.lock"))
+  system("echo \"Checking CocoaPods outdated dependencies:\"")
   system("pod outdated")
+  system("echo \"\n\"")
 end
 
 # Check for Carthage outdated dependencies
 if (File.exist?("Cartfile.resolved"))
+  system("echo \"Checking Carthage outdated dependencies:\"")
   system("carthage outdated")
+  system("echo \"\n\"")
 end
-
-# Print markdown containing a random post from thecodinglove.com.
-the_coding_love.random
