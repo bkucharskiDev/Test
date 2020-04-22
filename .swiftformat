@@ -1,7 +1,11 @@
-# Excluded directories
---exclude Pods
+# Configuration. Configure first two format options (swiftversion, header) if needed.
+
+# Excluded directories. Uncomment the next line to define excluded directories/files in your project.
+# --exclude
 
 # Format Options
+--header "\n {file}\n PROJECT_NAME\n"
+--swiftversion 5.2
 --allman false
 --binarygrouping none
 --commas inline
@@ -12,7 +16,6 @@
 --exponentcase lowercase
 --exponentgrouping disabled
 --fractiongrouping disabled
---header "\n {file}\n PROJECT_NAME\n"
 --hexgrouping none
 --hexliteralcase uppercase
 --ifdef indent
@@ -28,12 +31,13 @@
 --self remove
 --semicolons inline
 --stripunusedargs closure-only
---swiftversion 5.2
 --trimwhitespace always
 --wraparguments preserve
 --wrapcollections preserve
 --trailingclosures map,flatMap
 --nospaceoperators ...,..<
+
+
 
 # Enabled rules
 
