@@ -1,6 +1,6 @@
 # Configuration. Configure first two format options (swiftversion, header) if needed.
 
-# Excluded directories. Uncomment the next line to define excluded directories/files in your project.
+# Excluded files/directories. Uncomment the next line to define excluded files/directories in your project.
 # --exclude
 
 # Format Options
@@ -37,6 +37,9 @@
 --trailingclosures map,flatMap
 --nospaceoperators ...,..<
 
+# All rules - only these will be respected. This is to avoid automatically opting-in to new rules when SwiftFormat is updated.
+
+--rules andOperator,anyObjectProtocol,blankLinesAroundMark,blankLinesAtEndOfScope,blankLinesBetweenScopes,braces,consecutiveBlankLines,consecutiveSpaces,duplicateImports,elseOnSameLine,emptyBraces,hoistPatternLet,indent,leadingDelimiters,linebreakAtEndOfFile,numberFormatting,redundantBreak,redundantExtensionACL,redundantFileprivate,redundantGet,redundantInit,redundantLet,redundantLetError,redundantNilInit,redundantObjc,redundantParens,redundantPattern,redundantReturn,redundantSelf,redundantVoidReturnType,semicolons,spaceAroundBraces,spaceAroundBrackets,spaceAroundComments,spaceAroundGenerics,spaceAroundOperators,spaceAroundParens,spaceInsideBraces,spaceInsideBrackets,spaceInsideComments,spaceInsideGenerics,spaceInsideParens,specifiers,strongOutlets,strongifiedSelf,todos,trailingClosures,trailingCommas,trailingSpace,typeSugar,unusedArguments,void,fileHeader,yodaConditions,isEmpty,ranges,wrapArguments,redundantRawValues,sortedImports,wrap,blankLinesAtStartOfScope
 
 
 # Enabled rules

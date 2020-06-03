@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A110AC812487B4D7002CE9CD /* aaa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A110AC802487B4D7002CE9CD /* aaa.swift */; };
 		A11E4E3024486CE8000C56A6 /* XD.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11E4E2F24486CE8000C56A6 /* XD.swift */; };
 		A1EBC350243B268F00691536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBC34F243B268F00691536 /* AppDelegate.swift */; };
 		A1EBC352243B268F00691536 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1EBC351243B268F00691536 /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		2EBE4DAE7620A9D4054182C5 /* Pods_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8759DDD8A9A1C0EBA6B7644B /* Pods-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test.debug.xcconfig"; path = "Target Support Files/Pods-Test/Pods-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		A110AC802487B4D7002CE9CD /* aaa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaa.swift; sourceTree = "<group>"; };
 		A11E4E2F24486CE8000C56A6 /* XD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XD.swift; sourceTree = "<group>"; };
 		A1EBC34C243B268F00691536 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1EBC34F243B268F00691536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				8759DDD8A9A1C0EBA6B7644B /* Pods-Test.debug.xcconfig */,
 				FA989562DA525825AF74ECEB /* Pods-Test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -76,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				A1EBC34F243B268F00691536 /* AppDelegate.swift */,
+				A110AC802487B4D7002CE9CD /* aaa.swift */,
 				A1EBC351243B268F00691536 /* SceneDelegate.swift */,
 				A1EBC353243B268F00691536 /* ViewController.swift */,
 				A1EBC355243B268F00691536 /* Main.storyboard */,
@@ -193,6 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1EBC354243B268F00691536 /* ViewController.swift in Sources */,
+				A110AC812487B4D7002CE9CD /* aaa.swift in Sources */,
 				A1EBC350243B268F00691536 /* AppDelegate.swift in Sources */,
 				A1EBC352243B268F00691536 /* SceneDelegate.swift in Sources */,
 				A11E4E3024486CE8000C56A6 /* XD.swift in Sources */,
