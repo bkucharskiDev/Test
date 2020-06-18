@@ -81,6 +81,8 @@ GEM
       danger-plugin-api (~> 1.0)
     danger-plugin-api (1.0.0)
       danger (> 2.0)
+    danger-swiftformat (0.7.0)
+      danger-plugin-api (~> 1.0)
     danger-swiftlint (0.24.2)
       danger
       rake (> 10)
@@ -156,6 +158,7 @@ DEPENDENCIES
   danger-commit_lint (~> 0.0.7)
   danger-ios_logs (~> 0.1.2)
   danger-jira (~> 0.6.0)
+  danger-swiftformat
   danger-swiftlint (~> 0.24.2)
   danger-xcode_summary (~> 0.5.1)
   xcpretty-json-formatter (~> 0.1.0)

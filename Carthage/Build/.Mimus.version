@@ -1,0 +1,10 @@
+{
+  "commitish" : "1.1.4",
+  "iOS" : [
+    {
+      "name" : "Mimus",
+      "hash" : "a9589dfa81e0d0faf1b01d2113a50a8ecf5c278a7b0c181614e6a3902ae0a5a9",
+      "swiftToolchainVersion" : "5.2.2 (swiftlang-1103.0.32.6 clang-1103.0.32.51)"
+    }
+  ]
+}

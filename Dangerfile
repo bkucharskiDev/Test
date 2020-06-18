@@ -18,7 +18,7 @@ jira.check(
 )
 
 # Ensure there is JIRA ID in PR title
-is_jira_id_included = github.pr_title.include? '[#{jira_project_id}-'
+is_jira_id_included = github.pr_title.include? "[#{jira_project_id}-"
 warn "PR doesn`t have JIRA ID in title or it`s not correct. PR title should begin with [#{ jira_project_id }-" if (is_jira_id_included == false)
 
 # Ensure there is a summary for a PR
@@ -30,7 +30,7 @@ xcode_summary.inline_mode = true
 xcode_summary.report "#{ENV["XCODE_TEST_JSON_REPORT_PATH"]}"
 
 # Run SwiftFormat
-# swiftformat.check_format
+swiftformat.check_format
 
 # Run SwiftLint
 swiftlint.lint_files
@@ -54,12 +54,30 @@ commit_lint.check warn: :all
 
 # Check for CocoaPods outdated dependencies
 if (File.exist?("Podfile.lock"))
-  message("Cocoapods: " + 'pod outdated')
+  cocoapods_message = `pod outdated`
+  if cocoapods_message.match(/No pod updates are available./)
+    cocoapods_message = "No pod updates are available."
+  end
+
+  index = cocoapods_message.index(/The following pod updates are available:/)
+  if index != nil
+    cocoapods_message = cocoapods_message[index...cocoapods_message.size]
+  end
+  message "Cocoapods: " + cocoapods_message
 end
 
 # Check for Carthage outdated dependencies
 if (File.exist?("Cartfile.resolved"))
-  message("Carthage: " + 'carthage outdated')
+  carthage_message = `carthage outdated`
+  if carthage_message.match(/All dependencies are up to date./)
+    carthage_message = "All dependencies are up to date."
+  end
+
+  index = carthage_message.index(/The following dependencies are outdated:/)
+  if index != nil
+    carthage_message = carthage_message[index...carthage_message.size]
+  end
+  message "Carthage: " + carthage_message
 end
 
 # Post random mem from thecodinglove.com. Uncomment the next line if you want to add it.
